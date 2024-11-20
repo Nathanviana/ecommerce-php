@@ -74,7 +74,7 @@ button:hover {
     transition: 0.3s color;
 }
 
-.login-button {
+.login-button, .shopcart-button {
     background-color: #009978;
     color: white;
     padding: 8px 20px;
@@ -241,9 +241,8 @@ footer li a:hover{
 }
 
 footer p{
-   
     color: #fff;
-  
+}
 /* single product */
 .small-img-group {
     display: flex;
@@ -300,6 +299,3 @@ footer p{
     }
 
 }
-
-}
-
