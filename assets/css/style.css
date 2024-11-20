@@ -212,3 +212,21 @@ button:hover {
         visibility: visible;
     }
 }
+
+#banner {
+    background: url(https://static.tildacdn.com/tild3966-3431-4064-b665-353330313861/7.jpg) no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 80px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#banner h1{
+   color: white;
+}
