@@ -22,6 +22,15 @@
             object-fit: cover;
         }
 
+        .pagination{
+            justify-content: center;
+        }
+
+        .pagination li:hover a{
+            color: aliceblue;
+            background-color: #000;
+        }
+
     </style>
 
 </head>
@@ -66,11 +75,11 @@
     <!-- featured -->
     <section id="featured" class="my-5 pb-5">
         <div class="container mt-5 py-5">
-            <h3>Our Featured Products</h3>
+            <h3>Our Products</h3>
             <hr>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
-        <div class="row mx-auto container-fluid">
+        <div class="row mx-auto container">
             <div class="product text-center col-lg-3 col-md-4 col-sm-12">
                 <img class="img-fluid md-3" src="" alt="">
 
@@ -225,6 +234,18 @@
                 <h4 class="p-price">199.8</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
+
+            <!-- pagination -->
+            <nav aria-label="Page navigation example">
+                <ul class="pagination mt-5">
+                    <li class="page-item"><a class="page-link" href="">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="">1</a></li>
+                    <li class="page-item"><a class="page-link" href="">2</a></li>
+                    <li class="page-item"><a class="page-link" href="">3</a></li>
+                    <li class="page-item"><a class="page-link" href="">Next</a></li>
+                </ul>
+            </nav>
+
         </div>
     </section>
 
