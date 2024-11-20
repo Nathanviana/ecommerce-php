@@ -363,6 +363,49 @@ footer p{
     font-weight: 600;
 }
 
+/* account */
+#account-form{
+    width: 50%;
+    margin: 35px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#account-form input {
+    width: 100%;
+    margin: 5px auto;
+    padding: 10px;
+    border: 1px solid #009978;
+    border-radius: 8px;
+    outline: none;
+}
+
+#account-form #change-pass-btn{
+    width: 100%;
+    margin: 5px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #009978;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;  
+}
+
+#account-form #change-pass-btn:hover {
+    background-color: #00b29e;
+}
+
+.account-info #orders-btn,#logout-btn{
+    width: 100%;
+    margin: 5px auto;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;  
+}
+
+
 
 @media (min-width: 991px) {
     .nav-link::before {
