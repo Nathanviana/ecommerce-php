@@ -511,3 +511,36 @@ th:last-child{
     background-color: #00b29e;
     color: #fff;
 }
+
+/* Orders */
+
+.orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orders .product-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.orders th{
+    padding: 5px 20px;
+    color: #fff;
+    background-color: #00b29e;
+    text-align: left;
+}
+
+.orders td:nth-child(2){
+    text-align: right;
+}
+
+.orders td{
+    padding: 10px 20px;
+}
+
+.orders td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
