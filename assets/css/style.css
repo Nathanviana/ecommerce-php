@@ -105,7 +105,6 @@ button:hover {
 }
 
 .nav-link:hover,
-.nav-link.active, .navbar-i:hover {
 .nav-link.active {
     color: #000;
 }
@@ -195,7 +194,6 @@ button:hover {
     opacity: 0.7;
 }
 
-
 /* banner */ 
 #banner {
     background: url(https://static.tildacdn.com/tild3966-3431-4064-b665-353330313861/7.jpg) no-repeat;
@@ -243,9 +241,8 @@ footer li a:hover{
 }
 
 footer p{
-   
     color: #fff;
-  
+}
 /* single product */
 .small-img-group {
     display: flex;
@@ -301,25 +298,4 @@ footer p{
         visibility: visible;
     }
 
-#banner {
-    background: url(https://static.tildacdn.com/tild3966-3431-4064-b665-353330313861/7.jpg) no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: 80px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
-#banner h1{
-   color: white;
-}
-
-}
-
-}
-
