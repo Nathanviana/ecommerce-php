@@ -194,7 +194,7 @@ button:hover {
     opacity: 0.7;
 }
 
-/* banner */
+/* banner */ 
 #banner {
     background: url(https://static.tildacdn.com/tild3966-3431-4064-b665-353330313861/7.jpg) no-repeat;
     background-size: cover;
@@ -213,6 +213,37 @@ button:hover {
    color: white;
 }
 
+
+footer{
+    background-color: #222222;
+}
+
+footer h5{
+    color: #d8d8d8;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer li {
+    padding-bottom: 4px;
+}
+
+
+footer li a{
+    font-size: 0.8rem;
+    color: #999;
+    text-decoration: none;
+}
+
+
+footer li a:hover{
+    color: #d8d8d8;
+}
+
+footer p{
+   
+    color: #fff;
+  
 /* single product */
 .small-img-group {
     display: flex;
@@ -245,6 +276,7 @@ button:hover {
 
 .single-product .buy-btn:hover{
     background-color: #3d3d3d;
+  
 }
 
 @media (min-width: 991px) {
@@ -266,4 +298,8 @@ button:hover {
         width: 100%;
         visibility: visible;
     }
+
 }
+
+}
+
