@@ -521,6 +521,7 @@ th:last-child{
     margin-right: 10px;
 }
 
+<<<<<<< HEAD
 /*Checkout */
 #checkout-form .checkout-small-element{
     width: 48%;
@@ -552,6 +553,8 @@ th:last-child{
     background-color: #009978;
 }
 
+=======
+>>>>>>> d20c9f3ac24a1ce88a6951a86141a0dab2d04433
 @media (min-width: 991px) {
     .nav-link::before {
         content: "";
