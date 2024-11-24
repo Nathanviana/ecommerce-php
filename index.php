@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 
     <!-- font awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 <body>
 
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand me-auto" href="#">logo</a>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
@@ -42,7 +42,7 @@
                 </div>
             </div>
       
-            <!-- carrinho -->
+             carrinho
             <a class="shopcart-button mx-lg-2" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
 
             <a href="account.html" class="login-button"><i class="fa-solid fa-user"></i></a>
@@ -51,7 +51,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
-    </nav>
+    </nav> -->
+
+    <?php include('navbar.php'); ?>
 
     <!-- home -->
     <section id="home">
