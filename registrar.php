@@ -14,7 +14,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
             <hr>
         </div>
         <div class="mx-auto container">
-            <form id="register-form" action="./server/register.php" method="post">
+            <form id="register-form" action="../ecommerce-php/server/register.php" method="POST">
                 <div class="form-group">
                     <label>Nome</label>
                     <input type="text" class="form-control" id="register-email" name="name" placeholder="nome" required>
