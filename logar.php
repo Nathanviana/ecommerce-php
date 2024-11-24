@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Login</title>
 
     <!-- font awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -20,70 +20,30 @@
 <body>
 
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand me-auto" href="#">logo</a>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" aria-current="page" href="shop.html">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="suporte.html">Suporte</a>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- carrinho -->
-            <a class="shopcart-button mx-lg-2" href="shop.html"><i class="fa-solid fa-cart-shopping"></i></a>
-
-            <a href="#" class="login-button"><i class="fa-solid fa-user"></i></a>
-            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
+    <?php include ('navbar.php'); ?>
 
 
-    <!-- register -->
+    <!-- login -->
     <section class="my-5 py-5">
         <div class="container text-center mt-3 pt-5">
-            <h2 class="form-weight-bold">Registro</h2>
+            <h2 class="form-weight-bold">Login</h2>
             <hr>
         </div>
         <div class="mx-auto container">
-            <form id="register-form" action="./server/register.php" method="post">
-                <div class="form-group">
-                    <label>Nome</label>
-                    <input type="text" class="form-control" id="register-email" name="name" placeholder="nome" required>
-                </div>
+            <form id="login-form" action="./server/login.php" method="post">
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" class="form-control" id="register-email" name="email" placeholder="Email" required>
+                    <input type="text" class="form-control" id="login-email" name="email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
                     <label>Senha</label>
-                    <input type="password" class="form-control" id="register-password" name="password" placeholder="Senha" required>
+                    <input type="password" class="form-control" id="login-password" name="password" placeholder="Senha" required>
                 </div>
                 <div class="form-group">
-                    <label>Confirmar Senha</label>
-                    <input type="password" class="form-control" id="register-confirm-password" name="confirmPassword" placeholder="Confirmar Senha" required>
+                    <input type="submit" class="btn" id="login-btn" value="Login" />
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btn" id="register-btn" value="register" />
-                </div>
-                <div class="form-group">
-                    <a id="login-url" class="btn">Já tem uma conta?<span> Login</span></a>
+                    <a href="./registrar.php" id="register-url" class="btn">Não tem conta?<span> Registre-se</span></a>
                 </div>
             </form>
         </div>

@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -13,9 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':senha', $senha);
         $stmt->execute();
-        header('Location: login.html');
+
+        header('Location: ../logar.php');
+
     } catch (PDOException $e) {
         echo "Erro: " . $e->getMessage();
     }
 }
-?>
+?> -->
+
