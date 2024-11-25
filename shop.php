@@ -5,6 +5,7 @@ $produtos = getProdutos(); // Obtém os produtos do banco
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +21,7 @@ $produtos = getProdutos(); // Obtém os produtos do banco
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <?php include('navbar.php'); ?>
@@ -34,11 +36,12 @@ $produtos = getProdutos(); // Obtém os produtos do banco
         <div class="row mx-auto container">
             <?php foreach ($produtos as $produto): ?>
                 <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                    <img src="<?php echo $produto['imagem_url']; ?>">
-
+                    <a href="single_product.php?id=<?php echo $produto['id']; ?>">
+                        <img src="<?php echo $produto['imagem_url']; ?>" alt="Imagem do Produto">
+                    </a>
                     <h5 class="p-name"><?php echo $produto['nome']; ?></h5>
                     <h4 class="p-price">R$ <?php echo number_format($produto['preco'], 2, ',', '.'); ?></h4>
-                    <button class="buy-btn">Buy Now</button>
+                    <a href="single_product.php?id=<?php echo $produto['id']; ?>" class="buy-btn">Detalhes</a>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -50,4 +53,5 @@ $produtos = getProdutos(); // Obtém os produtos do banco
         crossorigin="anonymous"></script>
 
 </body>
+
 </html>

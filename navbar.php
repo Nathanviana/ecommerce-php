@@ -1,6 +1,8 @@
 <!-- navbar.php -->
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 
 <nav class="navbar navbar-expand-lg fixed-top">
@@ -35,7 +37,7 @@ session_start();
         <?php endif; ?>
         
         <!-- Carrinho -->
-        <a class="shopcart-button mx-lg-2" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a class="shopcart-button mx-lg-2" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
 
 
         <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">

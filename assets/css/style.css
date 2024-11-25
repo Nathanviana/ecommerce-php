@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
     margin: 0;
@@ -9,68 +9,176 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
+    color: #333;
 }
 
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
+h1, h2, h3, h4, h5, h6 {
+    color: #009978;
 }
 
-h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
+a {
+    color: #009978;
+    text-decoration: none;
 }
 
-h3 {
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-
-h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-h5 {
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-h6 {
-    color: #d8d8d8;
+a:hover {
+    color: #00b29e;
 }
 
 button {
-    font-size: 0.8rem;
-    outline: none;
-    background-color: #000;
+    background-color: #009978;
     color: #fff;
     border: none;
-    padding: 13px 30px;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: 0.5s ease-in-out;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #00b29e;
 }
 
-
-/* NavBar */
+/* Navbar */
 .navbar {
     background-color: #fff;
-    height: 80px;
-    margin: 20px;
-    border-radius: 16px;
-    padding: 0.5rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
     font-size: 24px;
     font-weight: 700;
     color: #009978;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #009978;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer h5 {
+    color: #d8d8d8;
+    font-weight: 700;
+}
+
+footer a {
+    color: #999;
+}
+
+footer a:hover {
+    color: #d8d8d8;
+}
+
+footer p {
+    color: #fff;
+}
+
+/* Custom Sections */
+.section-title {
+    color: #009978;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #009978;
+    border-color: #009978;
+}
+
+.btn-primary:hover {
+    background-color: #00b29e;
+    border-color: #00b29e;
+}
+
+/* Cart */
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart th {
+    background-color: #009978;
+    color: #fff;
+    padding: 10px;
+}
+
+.cart td {
+    padding: 10px;
+}
+
+.cart .product-info {
+    display: flex;
+    align-items: center;
+}
+
+.cart .product-info img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.cart .remove-btn {
+    color: #009978;
+    text-decoration: none;
+}
+
+.cart .remove-btn:hover {
+    color: #00b29e;
+}
+
+/* Checkout */
+.checkout-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form .form-group {
+    margin-bottom: 20px;
+}
+
+.checkout-form .form-control {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.checkout-form .btn {
+    background-color: #009978;
+    border-color: #009978;
+}
+
+.checkout-form .btn:hover {
+    background-color: #00b29e;
+    border-color: #00b29e;
+}
+
+/* NavBar */
+.navbar {
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.navbar-brand {
     transition: 0.3s color;
 }
 
@@ -99,7 +207,6 @@ button:hover {
 }
 
 .nav-link {
-    color: #666777;
     font-weight: 500;
     position: relative;
 }
@@ -107,7 +214,6 @@ button:hover {
 .nav-link:hover {
     color: #000;
 }
-
 
 /* home */
 #home {
@@ -212,14 +318,7 @@ button:hover {
    color: white;
 }
 
-
-footer{
-    background-color: #222222;
-}
-
 footer h5{
-    color: #d8d8d8;
-    font-weight: 700;
     font-size: 1.2rem;
 }
 
@@ -227,21 +326,14 @@ footer li {
     padding-bottom: 4px;
 }
 
-
 footer li a{
     font-size: 0.8rem;
-    color: #999;
-    text-decoration: none;
 }
-
 
 footer li a:hover{
     color: #d8d8d8;
 }
 
-footer p{
-    color: #fff;
-}
 /* single product */
 .small-img-group {
     display: flex;
@@ -407,27 +499,6 @@ footer p{
 
 /* Cart */
 
-.cart table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.cart .product-info {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.cart th{
-    text-align: left;
-    padding: 5px 10px;
-    color: #fff;
-    background-color: #00b29e;
-}
-
-.cart td{
-    padding: 10px 20px;
-}
-
 .cart td img{
     width: 80px;
     height: 80px;
@@ -442,12 +513,6 @@ footer p{
 
 .cart td a{
     color: #00b29e;
-}
-
-.cart .remove-btn{
-    color: #00b29e;
-    text-decoration: none;
-    font-size: 14px;
 }
 
 .cart .edit-btn{
@@ -521,7 +586,6 @@ th:last-child{
     margin-right: 10px;
 }
 
-<<<<<<< HEAD
 /*Checkout */
 #checkout-form .checkout-small-element{
     width: 48%;
@@ -553,8 +617,6 @@ th:last-child{
     background-color: #009978;
 }
 
-=======
->>>>>>> d20c9f3ac24a1ce88a6951a86141a0dab2d04433
 @media (min-width: 991px) {
     .nav-link::before {
         content: "";
