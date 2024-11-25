@@ -1,10 +1,14 @@
+<?php
+include('./server/produtos.php'); // Inclui o arquivo de produtos
+$produtos = getProdutos(); // Obtém os produtos do banco
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <title>Home</title>
 
     <!-- font awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -14,278 +18,36 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-
-    <style>
-        .product img {
-            width: 100%;
-            height: auto;
-            box-sizing: border-box;
-            object-fit: cover;
-        }
-
-        .pagination {
-            justify-content: center;
-        }
-
-        .pagination li:hover a {
-            color: aliceblue;
-            background-color: #000;
-        }
-    </style>
-
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
+    <!-- Navbar -->
+    <?php include('navbar.php'); ?>
 
-    <!-- navbar -->
-    <?php include ('navbar.php'); ?>
-
-    <!-- featured -->
+    <!-- Produtos -->
     <section id="featured" class="my-5 pb-5">
         <div class="container mt-5 py-5">
             <h3>Our Products</h3>
             <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Explore the best products available in our shop.</p>
         </div>
         <div class="row mx-auto container">
-            <div onclick="window.location.href='single_product.html';" class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
+            <?php foreach ($produtos as $produto): ?>
+                <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+                    <img src="<?php echo $produto['imagem_url']; ?>">
 
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid md-3" src="" alt="">
-
-                <h5 class="p-name">Sports Shoes</h5>
-                <h4 class="p-price">199.8</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <!-- pagination -->
-            <nav aria-label="Page navigation example">
-                <ul class="pagination mt-5">
-                    <li class="page-item"><a class="page-link" href="">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="">1</a></li>
-                    <li class="page-item"><a class="page-link" href="">2</a></li>
-                    <li class="page-item"><a class="page-link" href="">3</a></li>
-                    <li class="page-item"><a class="page-link" href="">Next</a></li>
-                </ul>
-            </nav>
-
+                    <h5 class="p-name"><?php echo $produto['nome']; ?></h5>
+                    <h4 class="p-price">R$ <?php echo number_format($produto['preco'], 2, ',', '.'); ?></h4>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            <?php endforeach; ?>
         </div>
     </section>
-
-    <!--Footer-->
-    <footer class="mt-5 py-5">
-
-        <div class="row container mx-auto pt-5">
-            <div class=" footer-one col-lg-3 col-md-6 col-sm-12">
-                <p class="pt-3">We provide the best products for the most affordable prices</p>
-            </div>
-            <div class=" footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Featured</h5>
-                <ul class="text-uppercase">
-                    <li><a href="#">men</a></li>
-                    <li><a href="#">woman</a></li>
-                    <li><a href="#">boys</a></li>
-                    <li><a href="#">girls</a></li>
-                    <li><a href="#">new arrival</a></li>
-                    <li><a href="#">clothers</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Contact Us</h5>
-                <div>
-                    <h6 class="text-uppercase">Address</h6>
-                    <p>1234 Street Name, City</p>
-                </div>
-                <div>
-                    <h6 class="text-uppercase">Phone</h6>
-                    <p>121 324 2324</p>
-                </div>
-                <div>
-                    <h6 class="text-uppercase">Email</h6>
-                    <p>nathanbaker@gmail.com</p>
-                </div>
-
-            </div>
-
-            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Instagram</h5>
-            </div>
-        </div>
-
-
-
-        <div class="copyright mt-5">
-            <div class="row container mx-auto">
-                <div class="col-lg-3 col-md-5 col-md-12 mb-4">
-                    <p>&copy; 2024 Eshop. All rights reserved</p>
-                </div>
-                <div class="col-lg-3 col-md-5 col-md-12 mb-4 text-nowrap mb-4">
-                </div>
-                <div class="col-lg-3 col-md-5 col-md-12 mb-4">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-
-
-
-    </footer>
-
 
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-</body>
 
+</body>
 </html>
