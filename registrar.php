@@ -30,7 +30,7 @@
             <hr>
         </div>
         <div class="mx-auto container">
-            <form id="register-form" action="../ecommerce-php/server/register.php" method="POST">
+            <form id="register-form" action="./server/register.php" method="POST">
                 <div class="form-group">
                     <label>Nome</label>
                     <input type="text" class="form-control" id="register-email" name="name" placeholder="nome" required>
